@@ -55,9 +55,7 @@ Demonstrar, de ponta a ponta, um fluxo de **ingestão, padronização, enriqueci
 ## ⚙️ Pré‑requisitos
 
 * **Conta Databricks** (Community Edition ou Workspace da sua organização)
-* **Cluster** com Runtime **DBR compatível com Delta Lake** (ex.: 14.x+)
-* **Databricks CLI** (opcional, para automações)
-* **Dados de exemplo** (adequar paths locais/DBFS conforme seu ambiente
+* **Configure os caminhos conforme nomenclatura dos arquivos na pasta Dados**
 
 ---
 
@@ -67,7 +65,6 @@ Demonstrar, de ponta a ponta, um fluxo de **ingestão, padronização, enriqueci
 2. **Anexe** todos ao **mesmo cluster** (ou compatíveis) e **configure** widgets/paths.
 3. **Execute em ordem** (01 → 10), verificando os resultados ao final de cada etapa.
 4. **Valide** as tabelas Delta criadas em cada camada (SQL UI do Databricks ajuda!).
-5. (Opcional) **Programe um Job** para encadear e agendar as execuções.
 
 ---
 
@@ -118,6 +115,6 @@ Demonstrar, de ponta a ponta, um fluxo de **ingestão, padronização, enriqueci
 │   ├── 08_Tabela_Silver_Transacoes.ipynb
 │   ├── 09_Camada_Final.ipynb
 │   └── 10_Tabela_Gold.ipynb
-├── data/ (opcional: amostras .csv/.json/.parquet)
+├── dados/ (opcional: amostras .csv/.json/.parquet)
 └── README.md
 ```
